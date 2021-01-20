@@ -1,4 +1,11 @@
-h1 {
-  color: red;
-  font-size: 105px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+h1 {
+  color: blue;
+}
+
+@import './player';
+@import './song';
