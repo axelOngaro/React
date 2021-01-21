@@ -5,8 +5,10 @@
           box-sizing: border-box;
 }
 
-h1 {
-  color: blue;
+h1,
+h2,
+h3 {
+  color: #383838;
 }
 
 .player {
@@ -75,5 +77,18 @@ h1 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.song-container img {
+  width: 20%;
+  border-radius: 50%;
+}
+
+.song-container h2 {
+  padding: 3rem 1rem 1rem 1rem;
+}
+
+.song-container h3 {
+  font-size: 1rem;
 }
 /*# sourceMappingURL=app.css.map */
