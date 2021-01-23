@@ -5,10 +5,20 @@
           box-sizing: border-box;
 }
 
+body {
+  font-family: 'Lato', sans-serif;
+}
+
 h1,
 h2,
 h3 {
   color: #383838;
+}
+
+h3,
+h4 {
+  font-weight: 400;
+  color: #646464;
 }
 
 .player {
@@ -37,7 +47,7 @@ h3 {
 
 .time-control input {
   width: 100%;
-  padding: 1rem 2rem;
+  padding: 1rem 0rem;
 }
 
 .time-control p {
@@ -90,5 +100,71 @@ h3 {
 
 .song-container h3 {
   font-size: 1rem;
+}
+
+.library {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20rem;
+  height: 100%;
+  background: white;
+  -webkit-box-shadow: 2px 2px 50px #c7c7c7;
+          box-shadow: 2px 2px 50px #c7c7c7;
+  overflow: scroll;
+}
+
+.library h2 {
+  padding: 2rem;
+}
+
+.library-song {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem 2rem 2rem 1rem;
+  cursor: pointer;
+}
+
+.library-song img {
+  width: 30%;
+}
+
+.library-song:hover {
+  background: #dedefa;
+}
+
+.song-description {
+  padding-left: 1rem;
+}
+
+.song-description h2 {
+  font-size: 1rem;
+}
+
+.song-description h4 {
+  font-size: 0.7rem;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(155, 155, 155, 0.5) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(117, 117, 117, 0.5);
+  border-radius: 20px;
+  border: transparent;
 }
 /*# sourceMappingURL=app.css.map */
