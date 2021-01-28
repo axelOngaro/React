@@ -1,9 +1,10 @@
-import "./styles/app.css";
-import Player from "./components/Player";
-import Song from "./components/Song";
-import data from "./data";
-import React, { useState, useRef } from "react";
-import Library from "./components/Library";
+import './styles/app.css';
+import Player from './components/Player';
+import Song from './components/Song';
+import data from './data';
+import React, { useState, useRef } from 'react';
+import Library from './components/Library';
+import Nav from './components/Nav';
 
 function App() {
   //Ref
@@ -17,6 +18,7 @@ function App() {
     currentTime: 0,
     duration: 0,
   });
+  const [libraryStatus, setLibraryStatus] = useState(false);
 
   //Event handlers
   const timeUpdateHandler = (e) => {
@@ -28,6 +30,7 @@ function App() {
   //JSX
   return (
     <div className="App">
+      <Nav libraryStatus={libraryStatus} setLibraryStatus={setLibraryStatus} />
       <Song currentSong={currentSong} />
       <Player
         timeUpdateHandler={timeUpdateHandler}
@@ -44,6 +47,7 @@ function App() {
         setCurrentSong={setCurrentSong}
         isPlaying={isPlaying}
         setSongs={setSongs}
+        libraryStatus={libraryStatus}
       />
       <audio
         onTimeUpdate={timeUpdateHandler}
