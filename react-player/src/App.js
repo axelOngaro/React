@@ -37,6 +37,16 @@ function App() {
     });
   };
 
+  const songEndHandler = async () => {
+    let currentIndex = songs.findIndex((song) => song.id === currentSong.id);
+    if (currentIndex + 1 === songs.length) {
+      await setCurrentSong(songs[0]);
+      if (isPlaying) audioRef.current.play();
+      return;
+    }
+    await setCurrentSong(songs[currentIndex + 1]);
+    if (isPlaying) audioRef.current.play();
+  };
   //JSX
   return (
     <div className="App">
@@ -67,6 +77,7 @@ function App() {
         onLoadedMetadata={timeUpdateHandler}
         ref={audioRef}
         src={currentSong.audio}
+        onEnded={songEndHandler}
       ></audio>
     </div>
   );
