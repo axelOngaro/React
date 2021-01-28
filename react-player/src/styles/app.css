@@ -167,4 +167,8 @@ h4 {
   border-radius: 20px;
   border: transparent;
 }
+
+.selected {
+  background: purple;
+}
 /*# sourceMappingURL=app.css.map */
