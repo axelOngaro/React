@@ -4,7 +4,7 @@ const Song = ({ currentSong, isPlaying, setIsPlaying }) => {
   return (
     <div className="song-container">
       <img src={currentSong.cover} alt={currentSong.name} />
-      <h2>{currentSong.Name}</h2>
+      <h2>{currentSong.name}</h2>
       <h3>{currentSong.artist}</h3>
     </div>
   );
